@@ -5,6 +5,8 @@ const hbs = require('hbs')
 const app = express()
 const fs = require('fs')
 
+const port = process.env.PORT || 3000
+
 // use partials
 hbs.registerPartials(__dirname + '/views/partials')
 // tell express that i want to use template engines
@@ -65,6 +67,6 @@ app.get('/error', (req, res)=>{
 
 
 // use the listen method in order to keep the app live
-app.listen(3000, ()=>{
-    console.log('App is running on port 3000')
+app.listen(port, ()=>{
+    console.log(`App is running on ${port}`)
 })
