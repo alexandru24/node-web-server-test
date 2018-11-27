@@ -56,7 +56,9 @@ app.get('/info', (req, res)=>{
        bodyDescription: 'Some text to render'
    })
 })
-
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs')
+})
 
 app.get('/error', (req, res)=>{
     res.send({
